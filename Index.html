@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			var foo = function padString(string, resLength, symbol, isWay) {
+				if(string.length >= resLength){
+					return string;
+				} 
+				
+				return isWay ? padString(string, resLength - 1, symbol, isWay) + symbol : symbol + padString(string, resLength - 1,symbol);
+
+			
+			}
+			
+			var way = confirm('Right symbol?')
+
+			alert(foo('Some string', 15, '*', way)); 
+
+		</script>
+		
+	</body>
+</html>
